@@ -1,6 +1,6 @@
 # ESY.PL Password Generator
 
-Password generator. The page lives at `https://esy.pl/password-generator/`.
+Password generator. The page lives at [https://esy.pl/password-generator/](https://esy.pl/password-generator/).
 
 Passwords are created on the server in PHP 8.5 and returned to the browser in one request. The browser only draws the form and the entropy bar.
 
