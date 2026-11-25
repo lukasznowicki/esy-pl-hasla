@@ -2,7 +2,7 @@
     "name": "esy/password-generator",
     "description": "Password generator for esy.pl",
     "require": {
-        "php": ">=8.5 <8.6"
+        "php": ">=8.5"
     },
     "autoload": {
         "psr-4": {
@@ -10,9 +10,6 @@
         }
     },
     "config": {
-        "platform": {
-            "php": "8.5.13"
-        },
         "sort-packages": true
     }
 }

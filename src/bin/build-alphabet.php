@@ -162,8 +162,8 @@ function loadConfusables(string $path): array
         if (count($fields) < 2) {
             continue;
         }
-        $source = hexToUtf8(trim($fields[0]));
-        $target = hexToUtf8(trim($fields[1]));
+        $source = $fields[0] |> trim(...) |> hexToUtf8(...);
+        $target = $fields[1] |> trim(...) |> hexToUtf8(...);
         if ($source === '' || $target === '') {
             continue;
         }

@@ -83,7 +83,7 @@ final class Page
 
         header('Content-Type: text/html; charset=utf-8');
         header('Cache-Control: private, no-cache');
-        $e = static fn (string $value): string => htmlspecialchars($value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+        $e = htmlspecialchars(...);
         $htmlLang = Locale::htmlLang($locale);
         $optionsDisabled = $preset !== Preset::Custom;
         $showQuantum = $preset === Preset::Quantum;

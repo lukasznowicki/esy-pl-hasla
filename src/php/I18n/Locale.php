@@ -39,7 +39,7 @@ final class Locale
         $ranked = [];
         foreach (explode(',', $header) as $index => $part) {
             $bits = explode(';', trim($part));
-            $tag = strtolower(trim($bits[0] ?? ''));
+            $tag = ($bits[0] ?? '') |> trim(...) |> strtolower(...);
             if ($tag === '' || $tag === '*') {
                 continue;
             }

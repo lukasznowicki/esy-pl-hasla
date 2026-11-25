@@ -18,7 +18,7 @@ final class RequestGuard
     public static function assertJsonContent(): void
     {
         $header = (string) ($_SERVER['CONTENT_TYPE'] ?? $_SERVER['HTTP_CONTENT_TYPE'] ?? '');
-        $media = strtolower(trim(explode(';', $header, 2)[0]));
+        $media = explode(';', $header, 2)[0] |> trim(...) |> strtolower(...);
         if ($media !== 'application/json') {
             throw new DomainError('content_type');
         }
