@@ -1,0 +1,13 @@
+{
+    "private": true,
+    "scripts": {
+        "build": "sass scss/main.scss:../password-generator/assets/app.css --style=compressed --no-source-map && php bin/publish.php && esbuild js/app.js --minify --legal-comments=none --charset=utf8 --outfile=../password-generator/assets/app.js",
+        "alphabet": "php bin/build-alphabet.php",
+        "passwords": "php bin/build-passwords.php",
+        "check": "php bin/self-check.php"
+    },
+    "devDependencies": {
+        "esbuild": "^0.25.0",
+        "sass": "^1.80.0"
+    }
+}
